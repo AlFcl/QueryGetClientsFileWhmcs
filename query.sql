@@ -23,3 +23,21 @@ ON f.userid = c.id
 WHERE c.status = 'Active'
 
 ## query by ALFcl..
+
+
+## get last file ##
+
+SELECT 
+
+FILENAME
+,MAX(DataUpdate)
+
+IdClient
+FROM
+clientfiledate
+
+WHERE 
+
+ IdClient = 1	
+ group by  FILENAME 
+limit 
